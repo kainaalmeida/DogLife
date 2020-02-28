@@ -396,5 +396,29 @@
   <ItemGroup>
     <BundleResource Include="Resources\news03.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog_notify_5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
