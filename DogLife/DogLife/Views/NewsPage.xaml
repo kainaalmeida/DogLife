@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DogLife.Views.NewsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    BackgroundColor="#fafafa">
+
+    <CollectionView Margin="20" ItemsSource="{Binding NewsList}">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="5" BackgroundColor="Transparent">
+                    <pancake:PancakeView
+                        BackgroundColor="White"
+                        CornerRadius="8"
+                        Elevation="4"
+                        HasShadow="True">
+                        <Grid Padding="10" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame
+                                Grid.Column="0"
+                                Padding="0"
+                                CornerRadius="8"
+                                HasShadow="False">
+                                <Image
+                                    HeightRequest="90"
+                                    Source="{Binding UrlImage}"
+                                    WidthRequest="90" />
+                            </Frame>
+
+                            <StackLayout
+                                Grid.Column="1"
+                                Padding="0"
+                                VerticalOptions="Center">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="13"
+                                    Text="{Binding Title}" />
+                                <Label FontSize="Micro" Text="{Binding Description}" />
+                            </StackLayout>
+
+                        </Grid>
+                    </pancake:PancakeView>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>

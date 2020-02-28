@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:ExtendedTabbedPage
+    x:Class="DogLife.Views.DogTabbedPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:controls="clr-namespace:DogLife.Controls"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:views="clr-namespace:DogLife.Views"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.HasBackButton="False">
+
+    <controls:ExtendedTabbedPage.Children>
+        <!--<NavigationPage>
+            <x:Arguments>-->
+        <views:HomePage />
+        <views:NewsPage />
+        <views:NewPage />
+        <views:NotificationPage />
+        <views:SettingPage />
+        <!--</x:Arguments>
+        </NavigationPage>-->
+
+    </controls:ExtendedTabbedPage.Children>
+
+</controls:ExtendedTabbedPage>

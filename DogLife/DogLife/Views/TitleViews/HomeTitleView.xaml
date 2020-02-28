@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DogLife.Views.TitleViews.HomeTitleView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Column="0"
+                HeightRequest="30"
+                Source="user"
+                WidthRequest="30" />
+            <Image
+                Grid.Column="1"
+                HeightRequest="30"
+                Source="logo02" />
+            <Image
+                Grid.Column="2"
+                Margin="0,0,10,0"
+                HeightRequest="25"
+                Source="search"
+                WidthRequest="25" />
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

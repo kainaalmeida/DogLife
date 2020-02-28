@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DogLife.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True">
+
+
+    <CollectionView ItemsSource="{Binding Dogs}">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="60"
+                            Source="user"
+                            WidthRequest="60" />
+
+                        <StackLayout
+                            Grid.Column="1"
+                            Margin="10,0"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="Medium"
+                                Text="{Binding Name}" />
+                            <Label Text="{Binding HourAdd}" />
+                        </StackLayout>
+
+                        <Image
+                            Grid.Column="2"
+                            HeightRequest="30"
+                            HorizontalOptions="End"
+                            Source="share"
+                            WidthRequest="30" />
+
+                    </Grid>
+
+                    <Image
+                        Grid.Row="1"
+                        Margin="-10,0"
+                        Source="{Binding UrlIamge}" />
+
+                    <Grid Grid.Row="2" Margin="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="20"
+                            Source="bone_orange"
+                            WidthRequest="20" />
+
+                        <Label Grid.Column="1" Text="{Binding Bones, StringFormat='{0} Bones'}" />
+
+                        <Image
+                            Grid.Column="2"
+                            HeightRequest="20"
+                            Source="footprint"
+                            WidthRequest="20" />
+
+                        <Label Grid.Column="3" Text="{Binding Snaps, StringFormat='{0} Snaps'}" />
+                    </Grid>
+
+                    <BoxView
+                        Grid.Row="3"
+                        HeightRequest="2"
+                        Opacity=".2"
+                        Color="Gray" />
+
+                    <Label
+                        Grid.Row="4"
+                        Margin="20,0"
+                        FontSize="Body"
+                        Text="{Binding Description}" />
+
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
