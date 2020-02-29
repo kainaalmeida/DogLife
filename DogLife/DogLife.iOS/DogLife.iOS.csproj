@@ -420,5 +420,14 @@
   <ItemGroup>
     <BundleResource Include="Resources\dog_notify_5.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow_right%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow_right%403x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
