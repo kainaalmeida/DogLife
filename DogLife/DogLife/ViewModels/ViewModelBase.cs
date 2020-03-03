@@ -1,9 +1,5 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DogLife.ViewModels
 {
@@ -22,6 +18,8 @@ namespace DogLife.ViewModels
         {
             NavigationService = navigationService;
         }
+
+        public ViewModelBase(){}
 
         public virtual void Initialize(INavigationParameters parameters)
         {

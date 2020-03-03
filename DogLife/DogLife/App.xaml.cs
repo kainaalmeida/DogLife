@@ -1,8 +1,8 @@
-﻿using Prism;
-using Prism.Ioc;
-using DogLife.ViewModels;
+﻿using DogLife.ViewModels;
 using DogLife.Views;
-using Xamarin.Forms;
+using Plugin.SharedTransitions;
+using Prism;
+using Prism.Ioc;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -23,12 +23,13 @@ namespace DogLife
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync($"{nameof(SharedTransitionNavigationPage)}/{nameof(MainPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<NavigationPage>();
+            //containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<SharedTransitionNavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<ChangePasswordPage, ChangePasswordPageViewModel>();
             containerRegistry.RegisterForNavigation<RegisterPage, RegisterPageViewModel>();
@@ -39,6 +40,7 @@ namespace DogLife
             containerRegistry.RegisterForNavigation<NotificationPage, NotificationPageViewModel>();
             containerRegistry.RegisterForNavigation<SettingPage, SettingPageViewModel>();
             containerRegistry.RegisterForNavigation<DogTabbedPage, DogTabbedPageViewModel>();
+            containerRegistry.RegisterForNavigation<NewsDetailPage, NewsDetailPageViewModel>();
         }
     }
 }

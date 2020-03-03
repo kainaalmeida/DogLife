@@ -1,8 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="DogLife.Views.SettingPage">
-  
+<ContentPage
+    x:Class="DogLife.Views.SettingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    BackgroundColor="#fcfcfc">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="StackLayout">
+                <Setter Property="Margin" Value="20,0" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style TargetType="Image">
+                <Setter Property="HeightRequest" Value="15" />
+                <Setter Property="WidthRequest" Value="15" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <TableView HasUnevenRows="True" Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Account" TextColor="Black" >
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Edit Profile" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Change Password" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Language" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Other" TextColor="Black">
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Privacy Policy" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Contact Us" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="About App" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Logout" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+
+        </TableView>
+
+    </ScrollView>
+
 </ContentPage>

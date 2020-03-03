@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DogLife.Views.NewsDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+    prism:ViewModelLocator.AutowireViewModel="True">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Margin="-10,0"
+                sharedTransitions:Transition.Name="SelectedImage"
+                Aspect="AspectFill"
+                Source="{Binding SelectedNews.UrlImage}" />
+
+            <Label
+                Grid.Row="1"
+                Margin="20,0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="{Binding SelectedNews.Title}" />
+
+            <Label
+                Grid.Row="2"
+                Margin="20,0"
+                FontSize="Medium"
+                Text="{Binding SelectedNews.Description}" />
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
