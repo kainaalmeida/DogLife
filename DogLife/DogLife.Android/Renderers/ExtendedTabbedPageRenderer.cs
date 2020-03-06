@@ -1,11 +1,6 @@
 ﻿using Android.Content;
-using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.Support.Design.BottomNavigation;
-using Android.Support.Design.Internal;
 using Android.Support.Design.Widget;
-using Android.Views;
-using Android.Widget;
 using DogLife.Controls;
 using DogLife.Droid.Renderers;
 using DogLife.Droid.Utils;
@@ -14,7 +9,6 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 [assembly: ExportRenderer(typeof(ExtendedTabbedPage), typeof(ExtendedTabbedPageRenderer))]
 namespace DogLife.Droid.Renderers

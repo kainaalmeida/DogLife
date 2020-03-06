@@ -32,16 +32,7 @@ namespace DogLife.ViewModels
             : base(navigationService)
         {
 
-            //SelectedItemCommand = new DelegateCommand<News>(async (news) => await SelectedItemCommandExecute(news));
-
-            SelectedItemCommand = new DelegateCommand<News>(async (selectedNews) =>
-            {
-                SelectedNewsId = selectedNews.Id;
-
-                var navParam = new NavigationParameters { { nameof(SelectedNews), selectedNews } };
-                await navigationService.NavigateAsync($"{nameof(NewsDetailPage)}", navParam);
-            });
-
+            SelectedItemCommand = new DelegateCommand<News>(async (news) => await SelectedItemCommandExecute(news));
 
             NewsList.Add(new News { Id = 1, Title = "Dogs Are Even More Like Us...", Description = "Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim…", UrlImage = "news01" });
             NewsList.Add(new News { Id = 2, Title = "Is Your Dog Super Smart", Description = "Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim…", UrlImage = "news02" });
@@ -51,12 +42,12 @@ namespace DogLife.ViewModels
             NewsList.Add(new News { Id = 6, Title = "Are Dogs More Likely To Bite...", Description = "Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim…", UrlImage = "news06" });
         }
 
-        //private async Task SelectedItemCommandExecute(News news)
-        //{
-        //    SelectedNewsId = news.Id;
+        private async Task SelectedItemCommandExecute(News news)
+        {
+            SelectedNewsId = news.Id;
 
-        //    var navParam = new NavigationParameters { { nameof(SelectedNews), SelectedNews } };
-        //    await NavigationService.NavigateAsync($"{nameof(NewsDetailPage)}", navParam);
-        //}
+            var navParam = new NavigationParameters { { nameof(SelectedNews), SelectedNews } };
+            await NavigationService.NavigateAsync($"{nameof(NewsDetailPage)}", navParam);
+        }
     }
 }

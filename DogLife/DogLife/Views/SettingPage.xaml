@@ -11,11 +11,12 @@
         <ResourceDictionary>
 
             <Style TargetType="StackLayout">
-                <Setter Property="Margin" Value="20,0" />
+                <Setter Property="Padding" Value="20,0" />
                 <Setter Property="BackgroundColor" Value="White" />
                 <Setter Property="Orientation" Value="Horizontal" />
                 <Setter Property="HeightRequest" Value="60" />
                 <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
             <Style TargetType="Label">
@@ -37,7 +38,7 @@
 
         <TableView HasUnevenRows="True" Intent="Settings">
             <TableRoot>
-                <TableSection Title="Account" TextColor="Black" >
+                <TableSection Title="Account" TextColor="Black">
                     <ViewCell>
                         <StackLayout>
                             <Label Text="Edit Profile" />
